@@ -504,7 +504,7 @@ input:focus, textarea:focus{
   .form-grid{ grid-template-columns: 1fr; }
   .span-2{ grid-column: auto; }
 }
-
+ 
 /* Active nav item */
 .nav a[aria-current="page"]{
   color: var(--text);
