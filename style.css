@@ -504,3 +504,11 @@ input:focus, textarea:focus{
   .form-grid{ grid-template-columns: 1fr; }
   .span-2{ grid-column: auto; }
 }
+
+/* Active nav item */
+.nav a[aria-current="page"]{
+  color: var(--text);
+  background: rgba(214,178,94,0.10);
+  border: 1px solid rgba(214,178,94,0.18);
+  text-decoration: none;
+}
