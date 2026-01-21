@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engage • Clarity Framework</title>
+  <meta name="description" content="Request an invite for Clarity Framework Training. No funnel. No pressure. Just fit and readiness." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">Clarity Framework</span>
+          <span class="brand-subtitle">Training</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="training.html">Training</a>
+        <a href="boundaries.html">Boundaries</a>
+        <a href="about.html">About</a>
+        <a href="engage.html" aria-current="page">Engage</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="#form">Request an Invite</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Engage • Intake • Fit</p>
+          <h1>Request an invite</h1>
+          <p class="lede">
+            Engagement is intentionally simple. No funnel. No pressure. Just fit and readiness.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#form">Start the intake</a>
+            <a class="btn btn-secondary" href="boundaries.html">Read the boundaries</a>
+          </div>
+
+          <div class="card" style="margin-top:18px;">
+            <h3>How it works</h3>
+            <ul class="list">
+              <li><strong>Request:</strong> short intake about the decision and stakes</li>
+              <li><strong>Fit call:</strong> 15–30 minutes to confirm readiness</li>
+              <li><strong>Schedule:</strong> cohort seat or private team session</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Summary panel">
+          <h2 class="panel-title">We will say “no”</h2>
+          <ul class="panel-list">
+            <li>If you want validation for a decision already made</li>
+            <li>If you want templates instead of judgment</li>
+            <li>If the scope is political or value-conflicted (not diagnosable)</li>
+          </ul>
+          <div class="panel-note">
+            <p>
+              A direct “no” is part of maintaining integrity.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="form">
+      <div class="container">
+        <div class="section-head">
+          <h2>Intake</h2>
+          <p class="subhead">This is a placeholder form. Later we’ll wire it to GitHub-friendly hosting.</p>
+        </div>
+
+        <div class="form-shell" aria-label="Request an invite form">
+          <h3>Request an Invite</h3>
+          <p class="form-note">
+            Keep it brief. If it’s a fit, you’ll be contacted to schedule a short call.
+          </p>
+
+          <form action="#" method="post">
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+
+              <label>
+                <span>Role / Title</span>
+                <input type="text" name="role" autocomplete="organization-title" />
+              </label>
+
+              <label>
+                <span>Organization</span>
+                <input type="text" name="org" autocomplete="organization" />
+              </label>
+
+              <label class="span-2">
+                <span>What decision are you facing?</span>
+                <textarea name="decision" rows="4" placeholder="Briefly describe the decision and why it’s hard."></textarea>
+              </label>
+
+              <label class="span-2">
+                <span>What’s at stake?</span>
+                <textarea name="stakes" rows="3" placeholder="Cost of being wrong, reversibility, timing constraints, etc."></textarea>
+              </label>
+
+              <label class="span-2">
+                <span>What’s the current failure mode?</span>
+                <textarea name="failure" rows="3" placeholder="Where are you stuck—debate, misalignment, uncertainty, urgency, missing data, politics, etc.?"></textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Submit request</button>
+              <p class="fineprint">No certification. No badge. Just practice and demonstrated judgment.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-title">Clarity Framework Training</div>
+        <div class="footer-sub">Built for practitioners. No hype. No badges.</div>
+      </div>
+
+      <div class="footer-links" aria-label="Footer navigation">
+        <a href="training.html">Training</a>
+        <a href="boundaries.html">Boundaries</a>
+        <a href="about.html">About</a>
+        <a href="engage.html">Engage</a>
+      </div>
+
+      <div class="footer-meta">
+        <span>© <span id="year"></span> Clarity Framework</span>
+        <span class="dot" aria-hidden="true">•</span>
+        <a href="#" class="muted">Privacy</a>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
