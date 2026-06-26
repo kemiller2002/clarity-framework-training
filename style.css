@@ -1,20 +1,30 @@
 /* ========== Base / Reset ========== */
 :root{
-  --bg: #0b0f14;
-  --panel: #0f1621;
-  --card: #0e1520;
-  --text: #e8eef7;
-  --muted: #a8b3c6;
-  --faint: #7f8aa3;
-  --line: rgba(232,238,247,0.10);
+  /* Base */
+  --bg: #0b111c;         /* deep ink (slightly bluer than before) */
+  --panel: #0f1a2a;      /* panel surface */
+  --card: #0e1827;       /* card surface */
 
-  --accent: #d6b25e;            /* gold-ish accent */
-  --accent-2: rgba(214,178,94,0.14);
+  /* Text */
+  --text: #e7eef9;       /* near-white with cool bias */
+  --muted: #a7b6cf;      /* muted slate */
+  --faint: #7f91ad;      /* faint slate */
 
+  /* Lines / dividers */
+  --line: rgba(231,238,249,0.10);
+
+  /* Accent (primary): restrained slate blue */
+  --accent: #5f86c9;           /* slate blue */
+  --accent-2: rgba(95,134,201,0.16);
+
+  /* Optional neutral warmth (very subtle, not “gold”) */
+  --sand: #c7b78a;             /* warm neutral for tiny highlights */
+  --sand-2: rgba(199,183,138,0.14);
+
+  /* Shadow / radius / layout */
   --shadow: 0 14px 40px rgba(0,0,0,0.35);
   --radius: 18px;
   --radius-sm: 12px;
-
   --max: 1120px;
 }
 
