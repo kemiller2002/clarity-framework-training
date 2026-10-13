@@ -26,6 +26,11 @@
   --radius: 18px;
   --radius-sm: 12px;
   --max: 1120px;
+
+  /* Vertical rhythm between stacked blocks inside a composition */
+  --stack: 18px;
+  --stack-sm: 14px;
+  --stack-xs: 10px;
 }
 
 *{ box-sizing: border-box; }
@@ -36,8 +41,10 @@ body{
               radial-gradient(1000px 700px at 85% 20%, rgba(168,179,198,0.06), transparent 60%),
               var(--bg);
   color: var(--text);
-  font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font: 1rem/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   letter-spacing: 0.1px;
+  /* A single word longer than its column (large text, narrow screens) wraps instead of escaping */
+  overflow-wrap: break-word;
 }
 
 a{ color: inherit; text-decoration: none; }
@@ -97,16 +104,25 @@ h3{ font-size: 1.1rem; }
 
 /* ========== Accessibility ========== */
 .skip-link{
+  /* Visually hidden until focused (no off-canvas offset) */
   position: absolute;
-  left: -999px;
   top: 10px;
+  left: 12px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link:focus{
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip-path: none;
   padding: 10px 12px;
   border-radius: 10px;
   background: var(--panel);
   border: 1px solid var(--line);
-}
-.skip-link:focus{
-  left: 12px;
   z-index: 999;
 }
 
@@ -227,6 +243,7 @@ h3{ font-size: 1.1rem; }
 }
 .list li{ margin: 8px 0; }
 .list.compact li{ margin: 6px 0; }
+.card > .list + .subhead{ margin-top: var(--stack-xs); }
 
 /* ========== Hero ========== */
 .hero{
@@ -281,6 +298,10 @@ h3{ font-size: 1.1rem; }
   margin-top: 6px;
   font-weight: 650;
 }
+
+/* A card stacked under the hero copy, and a second titled block in a panel */
+.hero-copy > .card{ margin-top: var(--stack); }
+.hero-panel > * + .panel-title{ margin-top: var(--stack-sm); }
 
 /* Hero Panel */
 .hero-panel{
@@ -462,6 +483,7 @@ input:focus, textarea:focus{
 
 .footer-meta{
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
   justify-content: flex-end;
@@ -471,9 +493,9 @@ input:focus, textarea:focus{
 .dot{ opacity: 0.65; }
 
 /* ========== Responsive ========== */
-@media (max-width: 980px){
+@media (max-width: 61.25em){ /* 980px at the default text size; em so 200% text recomposes */
   .header-inner{
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
       "brand cta"
       "nav nav";
@@ -484,11 +506,11 @@ input:focus, textarea:focus{
   .nav{ grid-area: nav; flex-wrap: wrap; }
 
   .hero-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-trust{
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .bullets-grid,
@@ -496,11 +518,11 @@ input:focus, textarea:focus{
   .two-col,
   .boundaries-grid,
   .steps{
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .footer-inner{
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .footer-meta{
@@ -508,10 +530,18 @@ input:focus, textarea:focus{
   }
 }
 
-@media (max-width: 560px){
+@media (max-width: 35em){ /* 560px at the default text size */
   .container{ width: min(var(--max), calc(100% - 28px)); }
+  .header-inner{
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "brand"
+      "nav"
+      "cta";
+  }
+  .header-cta{ justify-content: flex-start; }
   .section{ padding: 64px 0; }
-  .form-grid{ grid-template-columns: 1fr; }
+  .form-grid{ grid-template-columns: minmax(0, 1fr); }
   .span-2{ grid-column: auto; }
 }
  
@@ -521,4 +551,25 @@ input:focus, textarea:focus{
   background: rgba(214,178,94,0.10);
   border: 1px solid rgba(214,178,94,0.18);
   text-decoration: none;
+}
+
+/* ========== Intake (not yet open) ========== */
+.intake-status{
+  margin: 0 0 16px 0;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(214,178,94,0.30);
+  background: rgba(214,178,94,0.06);
+  color: var(--text);
+}
+.intake-questions{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.intake-questions li{ margin: 8px 0; }
+
+/* ========== Reduced motion ========== */
+@media (prefers-reduced-motion: reduce){
+  .btn:hover{ transform: none; transition: none; }
 }

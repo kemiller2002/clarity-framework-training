@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Engage • Clarity Framework</title>
   <meta name="description" content="Request an invite for Clarity Framework Training. No funnel. No pressure. Just fit and readiness." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -45,11 +45,11 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#form">Start the intake</a>
+            <a class="btn btn-primary" href="#form">See the intake</a>
             <a class="btn btn-secondary" href="boundaries.html">Read the boundaries</a>
           </div>
 
-          <div class="card" style="margin-top:18px;">
+          <div class="card">
             <h3>How it works</h3>
             <ul class="list">
               <li><strong>Request:</strong> short intake about the decision and stakes</li>
@@ -79,59 +79,23 @@
       <div class="container">
         <div class="section-head">
           <h2>Intake</h2>
-          <p class="subhead">This is a placeholder form. Later we’ll wire it to GitHub-friendly hosting.</p>
+          <p class="subhead">What the intake covers, and its current status.</p>
         </div>
 
-        <div class="form-shell" aria-label="Request an invite form">
-          <h3>Request an Invite</h3>
-          <p class="form-note">
-            Keep it brief. If it’s a fit, you’ll be contacted to schedule a short call.
+        <section class="form-shell" aria-labelledby="intake-title">
+          <h3 id="intake-title">Request an Invite</h3>
+          <p class="intake-status" role="note">
+            The online intake is not open yet. This site does not collect or send requests, so there is no form to submit here.
           </p>
-
-          <form action="#" method="post">
-            <div class="form-grid">
-              <label>
-                <span>Name</span>
-                <input type="text" name="name" autocomplete="name" required />
-              </label>
-
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" autocomplete="email" required />
-              </label>
-
-              <label>
-                <span>Role / Title</span>
-                <input type="text" name="role" autocomplete="organization-title" />
-              </label>
-
-              <label>
-                <span>Organization</span>
-                <input type="text" name="org" autocomplete="organization" />
-              </label>
-
-              <label class="span-2">
-                <span>What decision are you facing?</span>
-                <textarea name="decision" rows="4" placeholder="Briefly describe the decision and why it’s hard."></textarea>
-              </label>
-
-              <label class="span-2">
-                <span>What’s at stake?</span>
-                <textarea name="stakes" rows="3" placeholder="Cost of being wrong, reversibility, timing constraints, etc."></textarea>
-              </label>
-
-              <label class="span-2">
-                <span>What’s the current failure mode?</span>
-                <textarea name="failure" rows="3" placeholder="Where are you stuck—debate, misalignment, uncertainty, urgency, missing data, politics, etc.?"></textarea>
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Submit request</button>
-              <p class="fineprint">No certification. No badge. Just practice and demonstrated judgment.</p>
-            </div>
-          </form>
-        </div>
+          <p class="form-note">When the intake opens, it will ask for:</p>
+          <ul class="intake-questions">
+            <li>Your name and email</li>
+            <li>Your role or title, and your organization</li>
+            <li>The decision you are facing, and why it is hard</li>
+            <li>What is at stake: the cost of being wrong, reversibility and timing</li>
+            <li>The current failure mode: debate, misalignment, uncertainty, urgency, missing data or politics</li>
+          </ul>
+        </section>
       </div>
     </section>
   </main>
@@ -143,17 +107,17 @@
         <div class="footer-sub">Built for practitioners. No hype. No badges.</div>
       </div>
 
-      <div class="footer-links" aria-label="Footer navigation">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="training.html">Training</a>
         <a href="boundaries.html">Boundaries</a>
         <a href="about.html">About</a>
         <a href="engage.html">Engage</a>
-      </div>
+      </nav>
 
       <div class="footer-meta">
         <span>© <span id="year"></span> Clarity Framework</span>
         <span class="dot" aria-hidden="true">•</span>
-        <a href="#" class="muted">Privacy</a>
+        <a href="privacy.html" class="muted">Privacy</a>
       </div>
     </div>
 

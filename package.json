@@ -1,0 +1,14 @@
+{
+  "name": "clarity-framework-training-site",
+  "private": true,
+  "type": "module",
+  "description": "Clarity Framework Training static site (published by GitHub Pages from the repository root). The site has no runtime npm dependencies; these are test-only tools.",
+  "scripts": {
+    "serve": "node tools/serve.mjs .",
+    "ui:conformance": "playwright test --config=playwright.config.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "ajv": "8.20.0"
+  }
+}

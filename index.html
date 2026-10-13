@@ -14,7 +14,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">
+      <a class="brand" href="index.html">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
           <span class="brand-title">Clarity Framework</span>
@@ -288,51 +288,19 @@
           </div>
         </div>
 
-        <div class="form-shell" aria-label="Request an invite form">
-          <h3>Request an Invite</h3>
-          <p class="form-note">
-            This is a placeholder form. Wire it to your form provider (Netlify, Formspree, HubSpot, etc.).
+        <section class="form-shell" aria-labelledby="intake-title">
+          <h3 id="intake-title">Request an Invite</h3>
+          <p class="intake-status" role="note">
+            The online intake is not open yet. This site does not collect or send requests, so there is no form to submit here.
           </p>
-
-          <form action="#" method="post">
-            <div class="form-grid">
-              <label>
-                <span>Name</span>
-                <input type="text" name="name" autocomplete="name" required />
-              </label>
-
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" autocomplete="email" required />
-              </label>
-
-              <label>
-                <span>Role / Title</span>
-                <input type="text" name="role" autocomplete="organization-title" />
-              </label>
-
-              <label>
-                <span>Organization</span>
-                <input type="text" name="org" autocomplete="organization" />
-              </label>
-
-              <label class="span-2">
-                <span>What decision are you facing?</span>
-                <textarea name="decision" rows="4" placeholder="Briefly describe the decision and why it’s hard."></textarea>
-              </label>
-
-              <label class="span-2">
-                <span>What’s at stake?</span>
-                <textarea name="stakes" rows="3" placeholder="Cost of being wrong, reversibility, timing constraints, etc."></textarea>
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Submit request</button>
-              <p class="fineprint">No certification. No badge. Just practice and demonstrated judgment.</p>
-            </div>
-          </form>
-        </div>
+          <p class="form-note">When the intake opens, it will ask for:</p>
+          <ul class="intake-questions">
+            <li>Your name and email</li>
+            <li>Your role or title, and your organization</li>
+            <li>The decision you are facing, and why it is hard</li>
+            <li>What is at stake: the cost of being wrong, reversibility and timing</li>
+          </ul>
+        </section>
       </div>
     </section>
   </main>
@@ -344,17 +312,17 @@
         <div class="footer-sub">Built for practitioners. No hype. No badges.</div>
       </div>
 
-      <div class="footer-links" aria-label="Footer navigation">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="#training">Training</a>
         <a href="#boundaries">Boundaries</a>
         <a href="#about">About</a>
         <a href="#engage">Engage</a>
-      </div>
+      </nav>
 
       <div class="footer-meta">
         <span>© <span id="year"></span> Clarity Framework</span>
         <span class="dot" aria-hidden="true">•</span>
-        <a href="#" class="muted">Privacy</a>
+        <a href="privacy.html" class="muted">Privacy</a>
       </div>
     </div>
 
