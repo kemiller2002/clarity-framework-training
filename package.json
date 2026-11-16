@@ -8,7 +8,7 @@
     "ui:conformance": "playwright test --config=playwright.config.mjs"
   },
   "devDependencies": {
-    "@playwright/test": "1.56.1",
+    "@playwright/test": "1.64.0",
     "ajv": "8.20.0"
   }
 }
